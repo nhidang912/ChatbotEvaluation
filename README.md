@@ -2,6 +2,8 @@
 
 This repository provides the code and dataset samples as supporting documents for our paper: **[End-to-End Chatbot Evaluation with Adaptive Reasoning and Uncertainty Filtering](https://arxiv.org/abs/2603.10570)**.
 
+This work is accepted at **ACIIDS 2026** _(18th Asian Conference on Intelligent Information and Database Systems)_.
+
 ### About the Project
 We propose an end-to-end automatic framework to reliably evaluate domain-specific chatbots (especially those relying on retrieval-augmented generation) with minimal human effort. Our system automatically synthesizes Q&A pairs from underlying knowledge bases, uses an LLM-as-a-judge to evaluate chatbot responses against reference answers, and applies uncertainty filtering to flag edge cases. This repository contains the evaluation pipelines, the generated dataset sample, and the code used to measure evaluation accuracy scaling.
 
