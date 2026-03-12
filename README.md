@@ -1,6 +1,6 @@
 # ChatbotEvaluation
 
-This repository provides the code and dataset samples as supporting documents for our paper: **[End-to-End Chatbot Evaluation with Adaptive Reasoning and Uncertainty Filtering]**.
+This repository provides the code and dataset samples as supporting documents for our paper: **[End-to-End Chatbot Evaluation with Adaptive Reasoning and Uncertainty Filtering](https://arxiv.org/abs/2603.10570)**.
 
 ### About the Project
 We propose an end-to-end automatic framework to reliably evaluate domain-specific chatbots (especially those relying on retrieval-augmented generation) with minimal human effort. Our system automatically synthesizes Q&A pairs from underlying knowledge bases, uses an LLM-as-a-judge to evaluate chatbot responses against reference answers, and applies uncertainty filtering to flag edge cases. This repository contains the evaluation pipelines, the generated dataset sample, and the code used to measure evaluation accuracy scaling.
@@ -26,7 +26,7 @@ To simplify the process and allow reproduction, we mimic looking into the origin
 
 This script will generate only the **question** and **expected_answer** columns.
 
-**Note**: The process of collecting the `received_answer` must be done by the reader themselves! You will need to take the generated questions and feed them into your own knowledge-base/chatbot system, then manually populate the `received_answer` column in the resulting excel file before running the evaluate script.
+**Note**: The process of collecting the `received_answer` must be done by the reader themselves! You will need to take the generated questions and feed them into your own knowledge-base/chatbot system, then manually populate the `received_answer` column in the resulting excel file before running the evaluate script. For convenience and reproducibility, readers may alternatively use `input/qa_300.xlsx`, which contains the same dataset used in the publication.
 
 Arguments:
 - `-i`: Path to the input excel file (e.g. `input/article.xlsx`).
@@ -75,11 +75,14 @@ python filter_uncertainty.py -i output/qa_300/k-step_conf/general/your_evaluated
 ## 6. Citation
 If you find our work helpful for your research, please consider citing our paper:
 ```bibtex
-@article{...,
-  title={End-to-End Chatbot Evaluation with Adaptive Reasoning and Uncertainty Filtering},
-  author={...},
-  journal={...},
-  year={...}
+@misc{dang2026endtoendchatbotevaluationadaptive,
+      title={End-to-End Chatbot Evaluation with Adaptive Reasoning and Uncertainty Filtering}, 
+      author={Nhi Dang and Tung Le and Huy Tien Nguyen},
+      year={2026},
+      eprint={2603.10570},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2603.10570}, 
 }
 ```
 
